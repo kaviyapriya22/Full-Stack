@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Set your project directories
+SRC_DIR="src"
+BIN_DIR="bin"
+
+# Make sure the bin directory exists
+mkdir -p $BIN_DIR
+
+# Compile Java files
+javac -d $BIN_DIR $SRC_DIR/**/*.java
+
+# Optional: Print the contents of the bin directory to see the compiled files
+echo "Compiled files:"
+ls -l $BIN_DIR
