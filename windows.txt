@@ -1,0 +1,15 @@
+@echo off
+
+:: Set your project directories
+set SRC_DIR=src
+set BIN_DIR=bin
+
+:: Make sure the bin directory exists
+if not exist %BIN_DIR% mkdir %BIN_DIR%
+
+:: Compile Java files
+javac -d %BIN_DIR% %SRC_DIR%\*.java
+
+:: Optional: Print the contents of the bin directory to see the compiled files
+echo Compiled files:
+dir %BIN_DIR%
